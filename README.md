@@ -2,7 +2,7 @@
 
 A high-fidelity translation engine running directly in your browser. This application converts public GitHub repositories into human-like "vibe-coding" requests using Google's experimental embedded Gemini Nano model.
 
-![sample output](image.png)
+![sample output](/public/image.png)
 
 > Link to the Hakai Repo to verify how good the generated prompt is: https://github.com/Mic-360/hakai
 
