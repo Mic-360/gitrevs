@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@100..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #F8F5F2;
+  --surface: #FFFFFF;
+  --surface-alt: #EBE5DF;
+  --text: #151413;
+  --text-muted: #6B655E;
+  --accent: #BA3616;
+  --accent-muted: rgba(186, 54, 22, 0.1);
+  --border: #DDD5CD;
+  --border-strong: #151413;
+  
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0C0C0B;
+    --surface: #141312;
+    --surface-alt: #1C1B19;
+    --text: #F2EFEA;
+    --text-muted: #8F8C88;
+    --accent: #E8512C;
+    --accent-muted: rgba(232, 81, 44, 0.15);
+    --border: #2C2A28;
+    --border-strong: #F2EFEA;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono); /* Default technical */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--surface);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
