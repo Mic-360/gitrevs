@@ -73,7 +73,7 @@ function PromptGenerator({ aiMode, apiKey, cloudModel }: PromptGeneratorProps) {
           throw new Error("Please enter a valid Gemini API Key to use cloud translation.");
         }
         
-        const promptText = generateCloudPrompt({ metaText, treeText, readme });
+        const promptText = generateCloudPrompt({ metaText, treeText, readme }, cloudModel);
         let modelEndpoint = 'gemini-3-flash-preview';
         if (cloudModel === 'pro') modelEndpoint = 'gemini-3.1-pro-preview';
         if (cloudModel === 'flash-lite') modelEndpoint = 'gemini-3.1-flash-lite-preview';
