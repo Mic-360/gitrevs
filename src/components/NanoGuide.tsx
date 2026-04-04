@@ -1,4 +1,4 @@
-function Guide() {
+function NanoGuide() {
   return (
     <section className="w-full px-4 sm:px-6 md:px-16 py-16 md:py-24 bg-(--bg)">
       <div className="max-w-7xl mx-auto">
@@ -150,4 +150,4 @@ function Guide() {
   );
 }
 
-export default Guide;
+export default NanoGuide;
